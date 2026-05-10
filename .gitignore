@@ -1,0 +1,40 @@
+# Python / Backend
+backend/venv/
+backend/.venv/
+backend/__pycache__/
+backend/.pytest_cache/
+backend/*.py[cod]
+backend/*$py.class
+backend/chroma_db/
+backend/uploads/
+backend/reports/
+backend/secrets/
+backend/.env
+
+# Node / Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.env
+frontend/.env.*
+frontend/.eslintcache
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# Databases
+*.sqlite3
+*.db
+
+# General / IDE / OS
+.venv/
+.env
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+coverage.xml
+htmlcov/
+.coverage

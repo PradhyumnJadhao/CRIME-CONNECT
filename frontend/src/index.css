@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply cursor-none bg-bg-deep text-text-main font-body selection:bg-violet-glow;
+  }
+  
+  a, button, input, select, textarea, label {
+    @apply cursor-none;
+  }
+}
+
+@layer components {
+  /* Headings Gradient */
+  .text-gradient {
+    @apply bg-grad-hero-text bg-clip-text text-transparent;
+  }
+  .text-gradient-amber {
+    @apply bg-grad-gold bg-clip-text text-transparent;
+  }
+  .text-gradient-violet {
+    @apply bg-grad-violet bg-clip-text text-transparent;
+  }
+
+  /* Tags */
+  .tag-base {
+    @apply inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full font-mono text-[11px] tracking-wider;
+  }
+  .tag-violet {
+    @apply tag-base bg-violet-glow/30 border border-violet-border text-violet-light;
+  }
+  .tag-amber {
+    @apply tag-base bg-amber-glow/30 border border-amber-border text-amber-light;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply px-8 py-3.5 rounded-xl bg-grad-gold text-bg-deep font-display font-semibold text-[15px]
+           shadow-[0_0_0_0_rgba(245,158,11,0.3)] transition-all duration-300
+           hover:shadow-[0_0_40px_rgba(245,158,11,0.3)] hover:scale-[1.03] hover:-translate-y-px;
+  }
+  
+  .btn-secondary {
+    @apply px-8 py-3.5 rounded-xl bg-violet-glow/10 border border-violet-border text-violet-light
+           font-display font-semibold text-[15px] transition-all duration-300 flex items-center gap-2
+           hover:bg-violet-glow hover:border-violet hover:shadow-[0_0_24px_rgba(139,92,246,0.2)];
+  }
+
+  .btn-ghost {
+    @apply px-4 py-2 rounded-lg h-9 border border-violet-border/50 bg-transparent text-text-muted
+           font-body font-medium text-sm transition-all duration-200 inline-flex items-center
+           hover:border-violet-border hover:text-violet-light hover:bg-violet-glow/20;
+  }
+}
+
+/* Glass Card with Hover */
+.glass-card {
+  @apply bg-bg-card backdrop-blur-xl border border-violet-border/30 rounded-2xl relative overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)];
+}
+.glass-card:hover {
+  @apply border-amber-border -translate-y-1.5 shadow-card-glow;
+}
+
+/* Markdown Rendering Utilities (Manual Prose) */
+.prose-invert {
+  color: #cbd5e1;
+}
+.prose-invert h3 {
+  @apply text-cyan font-display font-medium text-base mb-3 border-b border-cyan/20 pb-1 mt-6 first:mt-0;
+}
+.prose-invert h4 {
+  @apply text-cyan font-display font-medium text-sm mb-2 mt-4;
+}
+.prose-invert p {
+  @apply mb-3 last:mb-0 leading-relaxed;
+}
+.prose-invert ul {
+  @apply list-disc list-inside mb-4 space-y-1.5;
+}
+.prose-invert li {
+  @apply text-sm;
+}
+.prose-invert strong {
+  @apply text-cyan font-bold;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #0e0b14;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.2);
+  border-radius: 2px;
+}
