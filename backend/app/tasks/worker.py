@@ -14,10 +14,17 @@ from app.core.database import init_driver
 logger = logging.getLogger(__name__)
 
 # Initialize Celery app
+redis_url = settings.redis_url
+if redis_url.startswith("rediss://") and "ssl_cert_reqs" not in redis_url:
+    if "?" in redis_url:
+        redis_url += "&ssl_cert_reqs=none"
+    else:
+        redis_url += "?ssl_cert_reqs=none"
+
 celery_app = Celery(
     app=settings.app_name,
-    broker=settings.redis_url,
-    backend=settings.redis_url,
+    broker=redis_url,
+    backend=redis_url,
 )
 
 @worker_process_init.connect

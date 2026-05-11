@@ -59,7 +59,7 @@ const Upload = () => {
       const formData = new FormData();
       formData.append('file', files[0]);
 
-      const response = await api.post('/ingest/', formData, {
+      const response = await api.post('/ingest', formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       

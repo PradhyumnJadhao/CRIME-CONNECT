@@ -93,13 +93,33 @@ async def ingest_fir(
         # Don't abort – still try to process; case may partially exist
 
     # ── Dispatch background Celery task ──────────────────────────
-    process_fir_async.delay(str(save_path), case_id, str(db_user.id))
+    task = process_fir_async.delay(str(save_path), case_id, str(db_user.id))
 
     return {
         "case_id": case_id,
+        "job_id": task.id,
         "filename": file.filename,
         "file_size_mb": round(file_size_mb, 2),
         "status": "processing",
         "ocr_engine": "Google Gemini 2.5 Flash",
         "message": "File received. OCR and extraction running in background."
     }
+
+
+@router.get("/ingest/status/{task_id}")
+async def get_status(task_id: str):
+    from celery.result import AsyncResult
+    from app.tasks.worker import celery_app
+    
+    res = AsyncResult(task_id, app=celery_app)
+    state = res.state
+    
+    if state == "SUCCESS":
+        return {"status": "completed", "progress": 100}
+    elif state == "FAILURE":
+        return {"status": "failed", "error": str(res.result)}
+    elif state == "PROGRESS":
+        return {"status": "processing", "progress": res.info.get("progress", 0) if res.info else 0}
+    else:
+        return {"status": "processing", "progress": 0}
+
