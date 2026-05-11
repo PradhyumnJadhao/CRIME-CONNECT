@@ -246,20 +246,20 @@ Based on analysis, appears to be violent incident with multiple perpetrators and
 ┌─────────────────────────────────────────────────────────────────────┐
 │                         CLIENT TIER (Vercel)                        │
 │                                                                     │
-│  ┌──────────────────────────────────────────────────────────────┐ │
-│  │           React.js Frontend (Vite)                           │ │
-│  │  ┌─────────────┐ ┌──────────────┐ ┌──────────────────────┐  │ │
-│  │  │  Dashboard  │ │ Graph        │ │  AI Detective Chat   │  │ │
-│  │  │             │ │  Explorer    │ │                      │  │ │
-│  │  └─────────────┘ └──────────────┘ └──────────────────────┘  │ │
-│  │  ┌─────────────┐ ┌──────────────┐ ┌──────────────────────┐  │ │
-│  │  │  Upload     │ │  Timeline    │ │  Case Registry       │  │ │
-│  │  │  Module     │ │  View        │ │                      │  │ │
-│  │  └─────────────┘ └──────────────┘ └──────────────────────┘  │ │
-│  │                                                              │ │
-│  │  WebSocket Real-time Updates │ REST API Calls              │ │
-│  └──────────────────────────────┬───────────────────────────────┘ │
-└─────────────────────────────────┼──────────────────────────────────┘
+│  ┌──────────────────────────────────────────────────────────────┐   │
+│  │           React.js Frontend (Vite)                           │   │
+│  │  ┌─────────────┐ ┌──────────────┐ ┌──────────────────────┐   │   │
+│  │  │  Dashboard  │ │ Graph        │ │  AI Detective Chat   │   │   │
+│  │  │             │ │  Explorer    │ │                      │   │   │
+│  │  └─────────────┘ └──────────────┘ └──────────────────────┘   │   │
+│  │  ┌─────────────┐ ┌──────────────┐ ┌──────────────────────┐   │   │
+│  │  │  Upload     │ │  Timeline    │ │  Case Registry       │   │   │
+│  │  │  Module     │ │  View        │ │                      │   │   │
+│  │  └─────────────┘ └──────────────┘ └──────────────────────┘   │   │ 
+│  │                                                              │   │
+│  │  WebSocket Real-time Updates │ REST API Calls                │   │
+│  └──────────────────────────────┬───────────────────────────────┘   │
+└─────────────────────────────────┼───────────────────────────────────┘
                                   │
                     ┌─────────────▼──────────────┐
                     │    API Gateway (CORS)      │
@@ -268,25 +268,25 @@ Based on analysis, appears to be violent incident with multiple perpetrators and
 ┌─────────────────────────────────┼──────────────────────────────────┐
 │                   API TIER (Render Web Services)                   │
 │                                                                    │
-│  ┌───────────────────────────────────────────────────────────┐   │
-│  │              FastAPI Application (Python)                │   │
-│  │                                                           │   │
-│  │  ┌────────────────────────────────────────────────────┐  │   │
-│  │  │  API Routes                                        │  │   │
-│  │  │  ├─ POST /api/upload          → File ingestion    │  │   │
-│  │  │  ├─ POST /api/ingest          → Process document  │  │   │
-│  │  │  ├─ GET  /api/cases           → Fetch cases       │  │   │
-│  │  │  ├─ GET  /api/graph           → Get graph data    │  │   │
-│  │  │  ├─ POST /api/detective       → Chat with AI      │  │   │
-│  │  │  └─ GET  /api/timeline        → Timeline data     │  │   │
-│  │  └────────────────────────────────────────────────────┘  │   │
-│  │                                                           │   │
-│  │  WebSocket Handler (Real-time Logs)                      │   │
-│  │                                                           │   │
-│  │  Celery Task Dispatcher → Queue processing status        │   │
-│  └──────────────┬──────────────────────────────────────────┘   │
-│                 │                                                │
-└─────────────────┼────────────────────────────────────────────────┘
+│  ┌───────────────────────────────────────────────────────────┐     │
+│  │              FastAPI Application (Python)                 │     │
+│  │                                                           │     │
+│  │  ┌────────────────────────────────────────────────────┐   │     │
+│  │  │  API Routes                                        │   │     │
+│  │  │  ├─ POST /api/upload          → File ingestion     │   │     │
+│  │  │  ├─ POST /api/ingest          → Process document   │   │     │
+│  │  │  ├─ GET  /api/cases           → Fetch cases        │   │     │
+│  │  │  ├─ GET  /api/graph           → Get graph data     │   │     │
+│  │  │  ├─ POST /api/detective       → Chat with AI       │   │     │
+│  │  │  └─ GET  /api/timeline        → Timeline data      │   │     │
+│  │  └────────────────────────────────────────────────────┘   │     │
+│  │                                                           │     │
+│  │  WebSocket Handler (Real-time Logs)                       │     │
+│  │                                                           │     │
+│  │  Celery Task Dispatcher → Queue processing status         │     │
+│  └──────────────┬────────────────────────────────────────────┘     │
+│                 │                                                  │
+└─────────────────┼──────────────────────────────────────────────────┘
                   │
         ┌─────────┴──────────┬────────────┬─────────────┐
         │                    │            │             │
@@ -449,7 +449,7 @@ User Upload (FIR PDF)
 
 #### Clone & Navigate
 ```bash
-git clone https://github.com/anujparwal09/CRIME-CONNECT.git
+git clone https://github.com/PradhyumnJadhao/CRIME-CONNECT.git
 cd CRIME-CONNECT/backend
 ```
 
@@ -1109,9 +1109,9 @@ This project is licensed under the **MIT License** - see the [LICENSE](./LICENSE
 
 ## 📞 Support & Community
 
-- **Issues & Bug Reports**: [GitHub Issues](https://github.com/anujparwal09/CRIME-CONNECT/issues)
-- **Feature Requests**: [Discussions](https://github.com/anujparwal09/CRIME-CONNECT/discussions)
-- **Email**: [anujparwal@example.com](mailto:anujparwal@example.com)
+- **Issues & Bug Reports**: [GitHub Issues](https://github.com/PradhyumnJadhao/CRIME-CONNECT/issues)
+- **Feature Requests**: [Discussions](https://github.com/PradhyumnJadhao/CRIME-CONNECT/discussions)
+- **Email**: [pradhyumnjadhao12@gmail.com](mailto:pradhyumnjadhao12@gmail.com)
 
 ---
 
@@ -1119,19 +1119,13 @@ This project is licensed under the **MIT License** - see the [LICENSE](./LICENSE
 
 - **Live Application**: https://crime-connect-three.vercel.app/
 - **Backend API**: https://crime-connect.onrender.com/
-- **GitHub Repository**: https://github.com/anujparwal09/CRIME-CONNECT
+- **GitHub Repository**: https://github.com/PradhyumnJadhao/CRIME-CONNECT
 - **Documentation**: https://crime-connect-three.vercel.app/docs
 
 ---
 
 <div align="center">
 
-### Made with ❤️ by the Crime Connect Team
-
 **"Justice Demands Perfect Intelligence"**
-
-[![GitHub Stars](https://img.shields.io/github/stars/anujparwal09/CRIME-CONNECT?style=social)](https://github.com/anujparwal09/CRIME-CONNECT)
-[![GitHub Forks](https://img.shields.io/github/forks/anujparwal09/CRIME-CONNECT?style=social)](https://github.com/anujparwal09/CRIME-CONNECT)
-[![Twitter Follow](https://img.shields.io/twitter/follow/anujparwal?style=social)](https://twitter.com/anujparwal)
 
 </div>
