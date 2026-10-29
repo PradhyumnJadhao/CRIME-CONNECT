@@ -87,31 +87,16 @@ By leveraging cutting-edge **Agentic Reasoning**, **Graph Databases**, and **Lar
 
 ## 📸 Live Interface Preview
 
+
 ### Landing Page - The AI That Thinks Like a Detective
-![Landing Page](<img width="959" height="539" alt="Screenshot 2026-05-11 024002" src="https://github.com/user-attachments/assets/c9ecf9bb-b678-4dee-af9b-ee0fe7821965" />)
+![Landing Page](assets/screenshots/Landing%20Page.png)
+
 The hero section introduces Crime Connect as an autonomous detective that plans, reasons, and connects dots across thousands of case files.
 
-### Features Showcase
-![Features](https://img.shields.io/badge/Screenshot-2-blue)
-From raw FIR to criminal network in under 60 seconds. The three-step pipeline showcases the core value proposition:
-1. **Upload Documents** - Drop raw PDFs and incident reports
-2. **AI Builds Knowledge Graph** - Llama-3 identifies suspects, locations, weapons (94.3% accuracy)
-3. **Discover Hidden Networks** - Ask "Who is connected to Suspect X?" and get multi-hop traversal results with zero hallucinations
-
-### Why Crime Connect? - Core Differentiators
-![Why Crime Connect](https://img.shields.io/badge/Screenshot-3-blue)
-Highlights four key capabilities:
-- **Graph Intelligence** - Neo4j powered relationship mapping
-- **Agentic AI Reasoning** - LangGraph agents that plan investigations
-- **Temporal Crime Logic** - Timestamped events for bulletproof alibi verification
-- **Zero-Hallucination Evidence** - Every answer traced to source FIR documents
-
-### Hero Section with CTA
-![Hero Section](https://img.shields.io/badge/Screenshot-4-blue)
-"Upload disconnected FIR documents. Get an interactive knowledge graph, suspect profiling, and autonomous investigative leads — Because justice demands perfect intelligence."
 
 ### Command Center Dashboard
-![Command Center](https://img.shields.io/badge/Screenshot-5-blue)
+![Command Center](assets/screenshots/Dashboard.png)
+
 **Global Intelligence Overview** displaying:
 - **51 Total Cases** with live data synchronization
 - **2 Suspects Tracked** in the knowledge graph
@@ -120,8 +105,10 @@ Highlights four key capabilities:
 - **Activity Stream** showing real-time investigation progress
 - **Preview Overlay** with live topology visualization
 
+
 ### Document Ingestion Interface
-![Upload Module](https://img.shields.io/badge/Screenshot-6-blue)
+![Upload Module](assets/screenshots/Document%20Ingestion%20Interface.png)
+
 The ingestion hub featuring:
 - **Case Graph Preview** - Live visualization of entities being extracted
 - **Analytic Process Log** - Real-time progress tracking:
@@ -130,8 +117,10 @@ The ingestion hub featuring:
 - **Queued Documents** - Shows pending uploads with file size
 - **Case Archive** - Browse and manage processed cases
 
+
 ### Graph Explorer - Forensic Relationship Network Analysis
-![Graph Explorer](https://img.shields.io/badge/Screenshot-7-blue)
+![Graph Explorer](assets/screenshots/Graph%20Explorer.png)
+
 Interactive network visualization showing:
 - **36 Subjects** (suspects, victims, witnesses)
 - **66 Connections** (relationships between entities)
@@ -144,8 +133,10 @@ Interactive network visualization showing:
   - Related cases and evidence
   - Cross-reference data
 
+
 ### AI Detective Chatbot Interface
-![AI Detective](https://img.shields.io/badge/Screenshot-8-blue)
+![AI Detective](assets/screenshots/Chatbot%20Interface.png)
+
 The agentic reasoning interface featuring:
 - **Query Example**: "WHO IS THE VICTIM IN THIS CASE?"
 - **Analysis Summary** with key findings:
@@ -158,8 +149,10 @@ The agentic reasoning interface featuring:
   - **Multiple locations** with automatic context injection
 - The AI continuously scans the graph topology and injects relevant nodes into reasoning context
 
+
 ### Temporal Analysis Timeline
-![Timeline View](https://img.shields.io/badge/Screenshot-9-blue)
+![Timeline View](assets/screenshots/Temporal%20Analysis.jpeg)
+
 Chronological sequence of events:
 - `2025-02-10 00:00` - **Assault on Arun Pratap Singh**
   - Victim brutally assaulted with iron rod by Manoj Kumar Yadav, Pawan Yadav, and unknown accomplice
@@ -176,8 +169,10 @@ Each event includes:
 - "Analyze Trace" button for deep forensic analysis
 - "Find Related" button to discover connected cases
 
+
 ### Case Registry - Case Management Interface
-![Case Registry](https://img.shields.io/badge/Screenshot-10-blue)
+![Case Registry](assets/screenshots/Case%20Registry.png)
+
 Comprehensive case database with:
 - **Search functionality** - Find cases by ID or filename
 - **Case listings** with:
@@ -195,8 +190,10 @@ Sample cases shown:
 - FIR-a1a859f9: FIR_03_Armed_Robber... (9 entities, completed)
 - FIR-228b20cb: FIR_07_Kidnapping_Min... (0 entities, completed)
 
+
 ### Investigation Report - Generated PDF
-![Report Generation](https://img.shields.io/badge/Screenshot-11-blue)
+![Report Generation](assets/screenshots/Case%20Report.png)
+
 Professional investigation report header:
 - **CRIME CONNECT INTELLIGENCE SYSTEM** branding
 - **INVESTIGATION REPORT** title
@@ -204,8 +201,10 @@ Professional investigation report header:
 - Prepared by: Pradhyumn Jadhao
 - QR code for case tracking
 
+
 ### Report Content - Analysis & Findings
-![Report Details](https://img.shields.io/badge/Screenshot-12-blue)
+![Report Details](assets/screenshots/Report%20Content.png)
+
 Detailed investigation analysis including:
 
 **Investigation Summary:**
@@ -569,78 +568,6 @@ npm run preview
 
 ---
 
-## 🌍 Production Deployment
-
-### 1. Database Setup
-
-#### PostgreSQL on Render
-1. Go to [Render Dashboard](https://dashboard.render.com)
-2. Create New → PostgreSQL Database
-3. Copy the **Internal Connection String**
-4. Set `DATABASE_URL` in backend environment variables
-
-#### Neo4j on AuraDB
-1. Create account at [Neo4j Aura](https://neo4j.com/cloud/aura/)
-2. Create a new database (free tier available)
-3. Copy `NEO4J_URI`, `NEO4J_USERNAME`, `NEO4J_PASSWORD`
-4. Set these in backend environment variables
-
-#### Redis on Upstash
-1. Go to [Upstash Console](https://console.upstash.com/)
-2. Create a new Redis database
-3. Select "Eviction" mode and enable TLS
-4. Copy the `rediss://` URL (note the 's')
-5. Set as `REDIS_URL` in environment variables
-
-### 2. Frontend Deployment (Vercel)
-
-```bash
-# Connect GitHub repository to Vercel
-# Settings → Git
-```
-
-**Build & Deploy Settings:**
-- **Framework**: Vite
-- **Build Command**: `npm run build`
-- **Output Directory**: `dist`
-- **Environment Variables**:
-  ```
-  VITE_API_URL=https://crime-connect.onrender.com
-  ```
-
-**Production URL**: https://crime-connect-three.vercel.app
-
-### 3. Backend Deployment (Render)
-
-#### Create Web Service
-1. Go to [Render Dashboard](https://dashboard.render.com)
-2. New → Web Service
-3. Connect your GitHub repository
-4. **Settings**:
-   - **Environment**: Python 3
-   - **Build Command**: `pip install -r requirements.txt`
-   - **Start Command**: `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
-
-#### Environment Variables
-Set all variables from `.env` in Render dashboard
-
-**Production URL**: https://crime-connect.onrender.com
-
-### 4. Background Workers (Render)
-
-#### Create Background Worker
-1. New → Background Worker
-2. Connect your GitHub repository
-3. **Settings**:
-   - **Environment**: Python 3
-   - **Build Command**: `pip install -r requirements.txt`
-   - **Start Command**: `celery -A app.tasks.worker worker --loglevel=info`
-
-#### Environment Variables
-Copy all from backend Web Service
-
----
-
 ## 📖 API Documentation
 
 ### Authentication Endpoints
@@ -876,39 +803,6 @@ CELERY_TASK_TIME_LIMIT = 30 * 60  # 30 minutes
 
 ---
 
-## 🧪 Testing
-
-### Backend Tests
-
-```bash
-# Install test dependencies
-pip install pytest pytest-asyncio pytest-cov
-
-# Run all tests
-pytest
-
-# Run with coverage
-pytest --cov=app --cov-report=html
-
-# Run specific test file
-pytest tests/test_auth.py -v
-```
-
-### Frontend Tests
-
-```bash
-# Install test dependencies
-npm install --save-dev vitest @testing-library/react
-
-# Run tests
-npm run test
-
-# Coverage report
-npm run test:coverage
-```
-
----
-
 ## 📊 Performance Metrics
 
 ### Benchmarks
@@ -922,14 +816,6 @@ npm run test:coverage
 | Graph Query (1000+ nodes) | <200ms | 100% |
 | Multi-hop Traversal (3 hops) | <500ms | - |
 | AI Detective Response | 2-5s | Variable |
-
-### System Capacity
-
-- **Concurrent Uploads**: 1000+
-- **Total Cases**: 10,000+
-- **Graph Nodes**: 100,000+
-- **Query Response Time**: <1s (p95)
-- **Uptime**: 99.9% SLA
 
 ---
 
@@ -1085,15 +971,6 @@ app.add_middleware(
 - [ ] Enterprise analytics dashboard
 
 ---
----
-
-## 📄 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](./LICENSE) file for details.
-
-**Note:** While the code is open-source, the use of law enforcement software may require additional compliance with local regulations and data protection laws.
-
----
 
 ## 🙏 Acknowledgments
 
@@ -1104,14 +981,6 @@ This project is licensed under the **MIT License** - see the [LICENSE](./LICENSE
 - **Render** for reliable cloud infrastructure
 - **Vercel** for edge-cached frontend deployment
 - **Upstash** for serverless Redis
-
----
-
-## 📞 Support & Community
-
-- **Issues & Bug Reports**: [GitHub Issues](https://github.com/PradhyumnJadhao/CRIME-CONNECT/issues)
-- **Feature Requests**: [Discussions](https://github.com/PradhyumnJadhao/CRIME-CONNECT/discussions)
-- **Email**: [pradhyumnjadhao12@gmail.com](mailto:pradhyumnjadhao12@gmail.com)
 
 ---
 
