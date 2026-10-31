@@ -85,6 +85,29 @@ By leveraging cutting-edge **Agentic Reasoning**, **Graph Databases**, and **Lar
 
 ---
 
+## 🚔 Real-World Demonstration
+
+CrimeConnect was demonstrated at Gittikhadan Police Station, Nagpur, showcasing its AI-powered capabilities for FIR document analysis, entity extraction, and graph-based relationship exploration.
+
+The demonstration highlighted the platform's potential application in law enforcement workflows, bringing together document intelligence, knowledge graphs, and AI-assisted investigation.
+
+### 📸 CrimeConnect at Gittikhadan Police Station
+
+<p align="center">
+  <img src="assets/project.jpeg" width="75%" alt="CrimeConnect interface demonstrated to a police officer at Gittikhadan Police Station, Nagpur"/>
+</p>
+
+<p align="center">
+  <img src="assets/Gittikhadan%20Policde%20station.jpeg" width="85%" alt="CrimeConnect team with police officers at Gittikhadan Police Station, Nagpur"/>
+</p>
+
+<p align="center">
+  <i>CrimeConnect demonstrated in a police station environment in Nagpur, Maharashtra.</i>
+</p>
+
+---
+
+
 ## 📸 Live Interface Preview
 
 
