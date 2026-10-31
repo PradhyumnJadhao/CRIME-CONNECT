@@ -11,8 +11,6 @@
 
 **An AI-Powered Forensic Investigation Platform That Thinks Like a Detective**
 
-[Live Demo](#-live-deployment) • [Features](#-core-features) • [Architecture](#-system-architecture) • [Setup](#-local-development-setup) • [Contributing](#-contributors)
-
 </div>
 
 ---
@@ -87,22 +85,24 @@ By leveraging cutting-edge **Agentic Reasoning**, **Graph Databases**, and **Lar
 
 ## 🚔 Real-World Demonstration
 
-CrimeConnect was demonstrated at Gittikhadan Police Station, Nagpur, showcasing its AI-powered capabilities for FIR document analysis, entity extraction, and graph-based relationship exploration.
+CrimeConnect was demonstrated at Gittikhadan and Ajni Police Stations, Nagpur, showcasing its AI-powered capabilities for FIR document analysis, entity extraction, and graph-based relationship exploration.
 
-The demonstration highlighted the platform's potential application in law enforcement workflows, bringing together document intelligence, knowledge graphs, and AI-assisted investigation.
+The demonstrations highlighted the platform's potential application in law enforcement workflows, bringing together document intelligence, knowledge graphs, and AI-assisted investigation.
 
-### 📸 CrimeConnect at Gittikhadan Police Station
+### 📸 CrimeConnect at Gittikhadan Police Station, Nagpur
 
 <p align="center">
-  <img src="assets/project.jpeg" width="75%" alt="CrimeConnect interface demonstrated to a police officer at Gittikhadan Police Station, Nagpur"/>
+  <img src="https://raw.githubusercontent.com/PradhyumnJadhao/CRIME-CONNECT/main/assets/screenshots/Gittikhadan%20Police%20station.jpeg" width="85%" alt="CrimeConnect demonstration at Gittikhadan Police Station"/>
+</p>
+
+### 📸 CrimeConnect at Ajni Police Station, Nagpur
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/PradhyumnJadhao/CRIME-CONNECT/main/assets/screenshots/Ajni%20Police%20Station.jpeg" width="85%" alt="CrimeConnect demonstration at Ajni Police Station"/>
 </p>
 
 <p align="center">
-  <img src="assets/Gittikhadan%20Policde%20station.jpeg" width="85%" alt="CrimeConnect team with police officers at Gittikhadan Police Station, Nagpur"/>
-</p>
-
-<p align="center">
-  <i>CrimeConnect demonstrated in a police station environment in Nagpur, Maharashtra.</i>
+  <i>CrimeConnect demonstrated at two police stations in Nagpur, Maharashtra.</i>
 </p>
 
 ---
